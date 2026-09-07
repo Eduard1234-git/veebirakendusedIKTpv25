@@ -12,7 +12,7 @@
   <h1>Õpetaja veebirakenduste alused</h1>
 </header>
 
-<!-- Navigeerimismenüü (обязательно добавь ссылку на meedia.html и на других страницах) -->
+<!-- Navigeerimismenüü -->
 <nav>
   <ul>
     <li><a href="index.html">Kodu</a></li>
@@ -32,7 +32,8 @@
       <div class="galerii-Grid">
         <img src="https://picsum.photos/id/237/300/300" alt="Koer" loading="lazy">
         <img src="https://picsum.photos/id/1025/300/300" alt="Loom" loading="lazy">
-        <img src="https://picsum.photos/id/1062/300/300" alt="Vaade" alt="Loodus" loading="lazy">
+        <!-- Исправлено: убран второй alt -->
+        <img src="https://picsum.photos/id/1062/300/300" alt="Loodus" loading="lazy">
         <img src="https://picsum.photos/id/1074/300/300" alt="Jõgi" loading="lazy">
         <img src="https://picsum.photos/id/1084/300/300" alt="Buss" loading="lazy">
         <img src="https://picsum.photos/id/28/300/300" alt="Mets" loading="lazy">
@@ -42,19 +43,22 @@
     <!-- 2. Video -->
     <section id="video">
       <h2>Video</h2>
-      <iframe width="100%" height="250" src="https://www.youtube.com/embed/jNQXAC9IVRw" title="YouTube video" allowfullscreen></iframe>
+      <!-- Исправлено: width и height перенесены в style через CSS -->
+      <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" title="YouTube video" style="width:100%; height:250px;" allowfullscreen></iframe>
     </section>
 
     <!-- 3. Muusika -->
     <section id="muusika">
       <h2>Muusika</h2>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7vvV1HqucC9myXtdneNrRG?utm_source=generator&si=1eac0c25d0674541" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <!-- Исправлено: width заменено на style, убран устаревший frameborder -->
+      <iframe style="border-radius:12px; width:100%; height:152px; border:0;" src="https://open.spotify.com/embed/track/7vvV1HqucC9myXtdneNrRG" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     </section>
 
     <!-- 4. Kaart -->
     <section id="kaart">
       <h2>Asukoht</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2038.1!2d24.7535!3d59.437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMW4!5e0!3m2!1set!2see!4v1!5m2!1set!2see" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <!-- Исправлено: width заменено на style -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2038.1!2d24.7535!3d59.437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMW4!5e0!3m2!1set!2see!4v1!5m2!1set!2see" style="width:100%; height:250px; border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
   </div>
 </main>
