@@ -1,0 +1,120 @@
+/* Общие стили */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #e8f5e9;
+    background-image: url('Nimetu.png');
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 60px;
+    padding: 20px 20px 20px 100px;
+    border-bottom: 3px solid #7cb342;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #2e7d32;
+    background-color: transparent;
+    font-variant: small-caps;
+    margin: 0;
+}
+
+/* Навигационное меню */
+nav {
+    background-color: #4caf50;
+    padding: 5px 20px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 20px;
+    font-variant: small-caps;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #1b5e20;
+}
+
+/* Основной контент */
+main {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Красивые овальные блоки-карточки (как на твоем скриншоте) */
+section#kast1, section#kast2 {
+    border: 2px dashed #81c784;
+    background-color: #ffffff;
+    width: 80%;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+section#kast1 h3, section#kast2 h2 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+/* Картинка внутри второго блока */
+section#kast2 img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #aed581;
+    padding: 5px;
+    background-color: #f1f8e9;
+}
+
+/* Дополнительные заголовки и текст */
+main h2 {
+    color: #388e3c;
+    text-align: center;
+    margin-top: 30px;
+}
+
+main > p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Подвал сайта */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    font-variant: small-caps;
+    border-top: 2px solid #7cb342;
+    margin-top: 40px;
+    font-weight: bold;
+}
