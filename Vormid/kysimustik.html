@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Muusika küsimustik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #faf5ff; /* Очень светлый фиолетовый фон */
+            color: #2d1b4e;
+        }
+        h1 {
+            color: #581c87;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            margin-bottom: 15px;
+            border: 1px solid #d8b4fe;
+        }
+        th, td {
+            border: 1px solid #e9d5ff;
+            padding: 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #f3e8ff;
+            color: #581c87;
+        }
+        tr:hover {
+            background-color: #faf5ff;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], input[type="url"], select {
+            width: 95%;
+            padding: 6px;
+            border: 1px solid #d8b4fe;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        fieldset {
+            border: 1px solid #d8b4fe;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 4px;
+        }
+        legend {
+            color: #581c87;
+            font-weight: bold;
+        }
+        .btn-saada {
+            background-color: #7c3aed; /* Фиолетовая кнопка */
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-saada:hover {
+            background-color: #6d28d9;
+        }
+        .btn-reset {
+            background-color: #db2777; /* Розовая кнопка */
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-reset:hover {
+            background-color: #be185d;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Muusika küsimustik</h1>
+<p>HTML vormid ja nupud</p>
+
+<form action="#">
+    <table>
+        <!-- 1. Nimi -->
+        <tr>
+            <td><label for="nimi">Nimi:</label></td>
+            <td><input type="text" id="nimi" placeholder="Sisesta oma nimi"></td>
+        </tr>
+
+        <!-- 2. Muusikastiil -->
+        <tr>
+            <td><label for="stiil">Millist muusikat kuulad?</label></td>
+            <td>
+                <select name="stiil" id="stiil">
+                    <option value="vali">vali...</option>
+                    <option value="hiphop">hiphop</option>
+                    <option value="kantri">kantri</option>
+                    <option value="rock">rock</option>
+                    <option value="metal">metal</option>
+                </select>
+            </td>
+        </tr>
+
+        <!-- 3. Kuidas kuulad (Raadio) -->
+        <tr>
+            <td>Kuidas sa muusikat peamiselt kuulad?</td>
+            <td>
+                <input type="radio" id="spotify" name="kuulamine"> <label for="spotify">Spotify</label><br>
+                <input type="radio" id="raadio" name="kuulamine"> <label for="raadio">Raadio</label><br>
+                <input type="radio" id="vinylaat" name="kuulamine"> <label for="vinylaat">Vinüülplaat</label>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 4. Lemmik ansamblid (Fieldset) -->
+    <fieldset>
+        <legend>Tee oma valik - lemmik ansambel</legend>
+        <input type="checkbox" id="metallica"> <label for="metallica">Metallica</label><br>
+        <input type="checkbox" id="queen"> <label for="queen">Queen</label><br>
+        <input type="checkbox" id="nirvana"> <label for="nirvana">Nirvana</label><br>
+        <input type="checkbox" id="beatles"> <label for="beatles">The Beatles</label><br>
+        <input type="checkbox" id="acdc"> <label for="acdc">AC/DC</label>
+    </fieldset>
+
+    <br>
+
+    <table>
+        <!-- 5. Tunnid päevas -->
+        <tr>
+            <td><label for="tunnid">Mitu tundi päevas sa muusikat kuulad?</label></td>
+            <td>
+                0 <input type="range" id="tunnid" min="0" max="24" value="4"> 24
+            </td>
+        </tr>
+
+        <!-- 6. Lemmikvärv -->
+        <tr>
+            <td><label for="varv">Milline on sinu lemmikvärv?</label></td>
+            <td><input type="color" id="varv" value="#7c3aed"></td>
+        </tr>
+
+        <!-- 7. E-post -->
+        <tr>
+            <td><label for="epost">Sisesta e-posti aadress:</label></td>
+            <td><input type="email" id="epost" placeholder="example@example.com"></td>
+        </tr>
+
+        <!-- 8. Telefon -->
+        <tr>
+            <td><label for="tel">Sisesta oma telefoninumber:</label></td>
+            <td><input type="tel" id="tel" placeholder="51234567"></td>
+        </tr>
+
+        <!-- 9. Sünnipäev -->
+        <tr>
+            <td><label for="synni">Milline on sinu sünnipäev?:</label></td>
+            <td><input type="date" id="synni"></td>
+        </tr>
+
+        <!-- 10. Lemmik number -->
+        <tr>
+            <td><label for="number">Sisesta oma lemmik number:</label></td>
+            <td><input type="number" id="number" min="1" max="99" placeholder="1-99"></td>
+        </tr>
+
+        <!-- 11. Veebileht -->
+        <tr>
+            <td><label for="veeb">Sisesta oma lemmik veebileht:</label></td>
+            <td><input type="url" id="veeb" placeholder="https://example.com"></td>
+        </tr>
+    </table>
+
+    <p>Kas oled kindel, et soovid vormi esitada?</p>
+    <button type="submit" class="btn-saada">Saada</button>
+    <button type="reset" class="btn-reset">Reset</button>
+</form>
+
+<br><hr>
+
+<!-- Таблица с артистами -->
+<h2>Muusikaartistide andmed</h2>
+<table>
+    <tr>
+        <th>Artist</th>
+        <th>Stiil</th>
+        <th>Tuntud laul</th>
+    </tr>
+    <tr>
+        <td>The Beatles</td>
+        <td>Rock</td>
+        <td>Hey Jude</td>
+    </tr>
+    <tr>
+        <td>Lady Gaga</td>
+        <td>Pop</td>
+        <td>Bad Romance</td>
+    </tr>
+    <tr>
+        <td>Nirvana</td>
+        <td>Grunge</td>
+        <td>Smells Like Teen Spirit</td>
+    </tr>
+    <tr>
+        <td>Eminem</td>
+        <td>Hiphop</td>
+        <td>Lose Yourself</td>
+    </tr>
+</table>
+
+</body>
+</html>
