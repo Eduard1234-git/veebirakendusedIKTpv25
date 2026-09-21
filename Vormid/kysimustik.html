@@ -3,76 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Muusika küsimustik</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #faf5ff; /* Очень светлый фиолетовый фон */
-            color: #2d1b4e;
-        }
-        h1 {
-            color: #581c87;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #ffffff;
-            margin-bottom: 15px;
-            border: 1px solid #d8b4fe;
-        }
-        th, td {
-            border: 1px solid #e9d5ff;
-            padding: 10px;
-            text-align: left;
-            vertical-align: middle;
-        }
-        th {
-            background-color: #f3e8ff;
-            color: #581c87;
-        }
-        tr:hover {
-            background-color: #faf5ff;
-        }
-        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], input[type="url"], select {
-            width: 95%;
-            padding: 6px;
-            border: 1px solid #d8b4fe;
-            border-radius: 4px;
-            background-color: #fff;
-        }
-        fieldset {
-            border: 1px solid #d8b4fe;
-            padding: 10px;
-            background-color: #ffffff;
-            border-radius: 4px;
-        }
-        legend {
-            color: #581c87;
-            font-weight: bold;
-        }
-        .btn-saada {
-            background-color: #7c3aed; /* Фиолетовая кнопка */
-            color: white;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .btn-saada:hover {
-            background-color: #6d28d9;
-        }
-        .btn-reset {
-            background-color: #db2777; /* Розовая кнопка */
-            color: white;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .btn-reset:hover {
-            background-color: #be185d;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -83,43 +14,43 @@
     <table>
         <!-- 1. Nimi -->
         <tr>
-            <td><label for="nimi">Nimi:</label></td>
-            <td><input type="text" id="nimi" placeholder="Sisesta oma nimi"></td>
+            <td><label for="nimi">Sinu eesnimi ja perekonnanimi:</label></td>
+            <td><input type="text" id="nimi" placeholder="Kirjuta oma nimi siia"></td>
         </tr>
 
         <!-- 2. Muusikastiil -->
         <tr>
-            <td><label for="stiil">Millist muusikat kuulad?</label></td>
+            <td><label for="stiil">Millist muusikažanrit sa eelistad?</label></td>
             <td>
                 <select name="stiil" id="stiil">
                     <option value="vali">vali...</option>
-                    <option value="hiphop">hiphop</option>
-                    <option value="kantri">kantri</option>
-                    <option value="rock">rock</option>
-                    <option value="metal">metal</option>
+                    <option value="jazz">jazz</option>
+                    <option value="klassika">klassika</option>
+                    <option value="elektronika">elektronmuusika</option>
+                    <option value="pop">pop</option>
                 </select>
             </td>
         </tr>
 
-        <!-- 3. Kuidas kuulad (Raadio) -->
+        <!-- 3. Kuidas kuulad -->
         <tr>
-            <td>Kuidas sa muusikat peamiselt kuulad?</td>
+            <td>Millise platvormi kaudu sa peamiselt muusikat tarbid?</td>
             <td>
-                <input type="radio" id="spotify" name="kuulamine"> <label for="spotify">Spotify</label><br>
-                <input type="radio" id="raadio" name="kuulamine"> <label for="raadio">Raadio</label><br>
-                <input type="radio" id="vinylaat" name="kuulamine"> <label for="vinylaat">Vinüülplaat</label>
+                <input type="radio" id="apple" name="kuulamine"> <label for="apple">Apple Music</label><br>
+                <input type="radio" id="youtube" name="kuulamine"> <label for="youtube">YouTube Music</label><br>
+                <input type="radio" id="kassett" name="kuulamine"> <label for="kassett">Helikassett</label>
             </td>
         </tr>
     </table>
 
     <!-- 4. Lemmik ansamblid (Fieldset) -->
     <fieldset>
-        <legend>Tee oma valik - lemmik ansambel</legend>
-        <input type="checkbox" id="metallica"> <label for="metallica">Metallica</label><br>
-        <input type="checkbox" id="queen"> <label for="queen">Queen</label><br>
-        <input type="checkbox" id="nirvana"> <label for="nirvana">Nirvana</label><br>
-        <input type="checkbox" id="beatles"> <label for="beatles">The Beatles</label><br>
-        <input type="checkbox" id="acdc"> <label for="acdc">AC/DC</label>
+        <legend>Tee oma valik - lemmik artistid ja bändid</legend>
+        <input type="checkbox" id="imagine"> <label for="imagine">Imagine Dragons</label><br>
+        <input type="checkbox" id="coldplay"> <label for="coldplay">Coldplay</label><br>
+        <input type="checkbox" id="linkin"> <label for="linkin">Linkin Park</label><br>
+        <input type="checkbox" id="daft"> <label for="daft">Daft Punk</label><br>
+        <input type="checkbox" id="weeknd"> <label for="weeknd">The Weeknd</label>
     </fieldset>
 
     <br>
@@ -129,56 +60,56 @@
         <tr>
             <td><label for="tunnid">Mitu tundi päevas sa muusikat kuulad?</label></td>
             <td>
-                0 <input type="range" id="tunnid" min="0" max="24" value="4"> 24
+                0 <input type="range" id="tunnid" min="0" max="24" value="5"> 24
             </td>
         </tr>
 
         <!-- 6. Lemmikvärv -->
         <tr>
-            <td><label for="varv">Milline on sinu lemmikvärv?</label></td>
-            <td><input type="color" id="varv" value="#7c3aed"></td>
+            <td><label for="varv">Milline on sinu lemmikmuusika meeleolu värv?</label></td>
+            <td><input type="color" id="varv" value="#800080"></td>
         </tr>
 
         <!-- 7. E-post -->
         <tr>
-            <td><label for="epost">Sisesta e-posti aadress:</label></td>
-            <td><input type="email" id="epost" placeholder="example@example.com"></td>
+            <td><label for="epost">Sisesta oma kontakt e-post:</label></td>
+            <td><input type="email" id="epost" placeholder="kasutaja@domain.com"></td>
         </tr>
 
         <!-- 8. Telefon -->
         <tr>
-            <td><label for="tel">Sisesta oma telefoninumber:</label></td>
-            <td><input type="tel" id="tel" placeholder="51234567"></td>
+            <td><label for="tel">Sisesta oma mobiiltelefon:</label></td>
+            <td><input type="tel" id="tel" placeholder="+372 55555555"></td>
         </tr>
 
         <!-- 9. Sünnipäev -->
         <tr>
-            <td><label for="synni">Milline on sinu sünnipäev?:</label></td>
+            <td><label for="synni">Mis kuupäeval sa oled sündinud?:</label></td>
             <td><input type="date" id="synni"></td>
         </tr>
 
         <!-- 10. Lemmik number -->
         <tr>
-            <td><label for="number">Sisesta oma lemmik number:</label></td>
+            <td><label for="number">Sinu lemmik õnnenumber:</label></td>
             <td><input type="number" id="number" min="1" max="99" placeholder="1-99"></td>
         </tr>
 
         <!-- 11. Veebileht -->
         <tr>
-            <td><label for="veeb">Sisesta oma lemmik veebileht:</label></td>
-            <td><input type="url" id="veeb" placeholder="https://example.com"></td>
+            <td><label for="veeb">Sinu lemmik muusikateemaline veebileht:</label></td>
+            <td><input type="url" id="veeb" placeholder="https://soundcloud.com"></td>
         </tr>
     </table>
 
-    <p>Kas oled kindel, et soovid vormi esitada?</p>
+    <p>Kas oled kindel, et soovid ankeedi ära saata?</p>
     <button type="submit" class="btn-saada">Saada</button>
-    <button type="reset" class="btn-reset">Reset</button>
+    <button type="reset" class="btn-reset">Tühjenda</button>
 </form>
 
 <br><hr>
 
-<!-- Таблица с артистами -->
-<h2>Muusikaartistide andmed</h2>
+<!-- Таблица с новыми артистами -->
+<h2>Uuendatud muusikaartistide andmed</h2>
 <table>
     <tr>
         <th>Artist</th>
@@ -186,24 +117,24 @@
         <th>Tuntud laul</th>
     </tr>
     <tr>
-        <td>The Beatles</td>
-        <td>Rock</td>
-        <td>Hey Jude</td>
+        <td>Imagine Dragons</td>
+        <td>Pop-Rock</td>
+        <td>"Radioactive"</td>
     </tr>
     <tr>
-        <td>Lady Gaga</td>
-        <td>Pop</td>
-        <td>Bad Romance</td>
+        <td>Coldplay</td>
+        <td>Alternative Rock</td>
+        <td>"Yellow"</td>
     </tr>
     <tr>
-        <td>Nirvana</td>
-        <td>Grunge</td>
-        <td>Smells Like Teen Spirit</td>
+        <td>Linkin Park</td>
+        <td>Nu Metal</td>
+        <td>"In the End"</td>
     </tr>
     <tr>
-        <td>Eminem</td>
-        <td>Hiphop</td>
-        <td>Lose Yourself</td>
+        <td>The Weeknd</td>
+        <td>R&B / Synth-pop</td>
+        <td>"Blinding Lights"</td>
     </tr>
 </table>
 
