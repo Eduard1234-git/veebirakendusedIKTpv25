@@ -1,0 +1,65 @@
+/* Общие стили для всего сайта */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Заголовки */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 0;
+}
+
+/* Описательный текст */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Картинки на сайте */
+img {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    background-color: #ffffff;
+}
+
+/* Блок с пояснением/описанием на детальных страницах */
+.selgitus {
+    background-color: #ffffff;
+    border-left: 5px solid #3498db;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    max-width: 550px;
+    text-align: left;
+}
+
+/* Ссылки (навигация назад) */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}

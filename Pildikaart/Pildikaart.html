@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Inimkeha - Pildikaart</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<h1>Inimkeha lihased</h1>
+<p>Klõpsake pildil oleval kehaosal, et näha selle kohta lähemat selgitust.</p>
+
+<!-- Картинка с картой -->
+<img src="human.png" alt="Inimkeha" usemap="#body-map" width="400" height="700">
+
+<map name="body-map">
+  <!-- 1. Круг (circle): Голова -->
+  <area shape="circle" coords="200,60,35" href="pea.html" alt="Pea ja nägu">
+
+  <!-- 2. Прямоугольник (rect): Грудные мышцы -->
+  <area shape="rect" coords="140,150,260,240" href="rinnakorv.html" alt="Rinalihased">
+
+  <!-- 3. Прямоугольник (rect): Пресс (косые и прямые мышцы живота) -->
+  <area shape="rect" coords="155,245,245,340" href="kohulihased.html" alt="Kõhulihased">
+
+  <!-- 4. Полигон (poly): Правая рука / плечо -->
+  <area shape="poly" coords="140,155,95,170,70,300,120,280,140,210" href="kasivars.html" alt="Käsi">
+
+  <!-- 5. Полигон (poly): Левое бедро -->
+  <area shape="poly" coords="150,380,195,380,195,500,150,500" href="reied.html" alt="Reied">
+
+  <!-- 6. Полигон (poly): Голени / ноги -->
+  <area shape="poly" coords="150,520,195,520,190,650,160,670" href="saared.html" alt="Sääred">
+</map>
+
+<p><br><a href="../tood.html">Tagasi tööde juurde</a></p>
+</body>
+</html>
