@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Töölaud</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<h1>Töölaua interaktiivne kaart</h1>
+<p>Klõpsake pildil oleval esemel, et näha selle kirjeldust.</p>
+
+<!-- Общая картинка рабочего места -->
+<img src="tumba.png" alt="Töölaud" usemap="#desk-map" width="500" height="500">
+
+<map name="desk-map">
+  <!-- 1. Ноутбук (rect) -->
+  <area shape="rect" coords="185,90,340,160" href="notobuk.html" alt="Sülearvuti">
+
+  <!-- 2. Лампа (circle) -->
+  <area shape="circle" coords="395,100,25" href="lamp.html" alt="Laualamp">
+
+  <!-- 3. Цветок (circle) -->
+  <area shape="circle" coords="355,145,20" href="lill.html" alt="Lill potis">
+
+  <!-- 4. Стол (rect) -->
+  <area shape="rect" coords="90,170,430,240" href="laud.html" alt="Kirjutuslaud">
+
+  <!-- 5. Кресло (poly) -->
+  <area shape="poly" coords="10,80,180,80,190,400,10,400" href="tool.html" alt="Kontoritool">
+
+  <!-- 6. Тумба (rect) -->
+  <area shape="rect" coords="280,240,430,440" href="tumba.html" alt="Tumba">
+</map>
+
+<p><br><a href="../../tood.html">Tagasi tööde juurde</a></p>
+</body>
+</html>
