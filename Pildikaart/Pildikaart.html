@@ -2,36 +2,36 @@
 <html lang="et">
 <head>
   <meta charset="UTF-8">
-  <title>Inimkeha - Pildikaart</title>
+  <title>Töölaud</title>
   <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-<h1>Inimkeha lihased</h1>
-<p>Klõpsake pildil oleval kehaosal, et näha selle kohta lähemat selgitust.</p>
+<h1>Töölaua interaktiivne kaart</h1>
+<p>Klõpsake pildil oleval esemel, et näha selle kirjeldust.</p>
 
-<!-- Картинка с картой -->
-<img src="human.png" alt="Inimkeha" usemap="#body-map" width="400" height="700">
+<!-- Общая картинка рабочего места -->
+<img src="tumba.png" alt="Töölaud" usemap="#desk-map" width="500" height="500">
 
-<map name="body-map">
-  <!-- 1. Круг (circle): Голова -->
-  <area shape="circle" coords="200,60,35" href="pea.html" alt="Pea ja nägu">
+<map name="desk-map">
+  <!-- 1. Ноутбук (rect) -->
+  <area shape="rect" coords="185,90,340,160" href="notobuk.html" alt="Sülearvuti">
 
-  <!-- 2. Прямоугольник (rect): Грудные мышцы -->
-  <area shape="rect" coords="140,150,260,240" href="rinnakorv.html" alt="Rinalihased">
+  <!-- 2. Лампа (circle) -->
+  <area shape="circle" coords="395,100,25" href="lamp.html" alt="Laualamp">
 
-  <!-- 3. Прямоугольник (rect): Пресс (косые и прямые мышцы живота) -->
-  <area shape="rect" coords="155,245,245,340" href="kohulihased.html" alt="Kõhulihased">
+  <!-- 3. Цветок (circle) -->
+  <area shape="circle" coords="355,145,20" href="lill.html" alt="Lill potis">
 
-  <!-- 4. Полигон (poly): Правая рука / плечо -->
-  <area shape="poly" coords="140,155,95,170,70,300,120,280,140,210" href="kasivars.html" alt="Käsi">
+  <!-- 4. Стол (rect) -->
+  <area shape="rect" coords="90,170,430,240" href="laud.html" alt="Kirjutuslaud">
 
-  <!-- 5. Полигон (poly): Левое бедро -->
-  <area shape="poly" coords="150,380,195,380,195,500,150,500" href="reied.html" alt="Reied">
+  <!-- 5. Кресло (poly) -->
+  <area shape="poly" coords="10,80,180,80,190,400,10,400" href="tool.html" alt="Kontoritool">
 
-  <!-- 6. Полигон (poly): Голени / ноги -->
-  <area shape="poly" coords="150,520,195,520,190,650,160,670" href="saared.html" alt="Sääred">
+  <!-- 6. Тумба (rect) -->
+  <area shape="rect" coords="280,240,430,440" href="tumba.html" alt="Tumba">
 </map>
 
-<p><br><a href="../tood.html">Tagasi tööde juurde</a></p>
+<p><br><a href="../../tood.html">Tagasi tööde juurde</a></p>
 </body>
 </html>
