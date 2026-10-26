@@ -2,16 +2,102 @@
 <html lang="et">
 <head>
   <meta charset="UTF-8">
-  <title>Sülearvuti</title>
-  <link rel="stylesheet" href="Style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sülearvuti | ÜL2: Pildikaart</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="pildikaart.js" defer></script>
 </head>
-<body>
-<h1>Sülearvuti</h1>
-<img src="notobuk.png" alt="Sülearvuti" width="300" height="250">
-<div class="selgitus">
-  <h3>Kirjeldus</h3>
-  <p>Sülearvuti on kaasaskantav arvuti, mida kasutatakse õppimiseks, tööks ja meelelahutuses. See on asendamatu abimees igapäevastes tegevustes. Selliseid seadmeid saab osta igast elektroonikapoodist, näiteks Euronicsist või OnOffist.</p>
-</div>
-<p><a href="Pildikaart.html">Tagasi pildikaardile</a></p>
+<body data-initial="notobuk">
+<header>
+  <nav aria-label="Peamenüü"><a href="../index.html">← Tagasi kodulehele</a><a href="Pildikaart.html">Pildikaardi pealeht</a></nav>
+  <p class="eyebrow">ÜL2 · HTML map / area</p>
+  <h1>Sülearvuti</h1>
+  <p>Klõpsa pildi nummerdatud alal või selle all oleval nimetusel. Kirjeldus ilmub siinsamas pildi kõrval.</p>
+</header>
+<main>
+  <div class="workspace">
+    <figure class="map-figure">
+      <div class="map-frame">
+        <img id="desk-image" src="tumba.png" alt="Töökoht: sülearvuti, laualamp, potitaim, kirjutuslaud, kontoritool ja sahtliboks." width="1024" height="1024" usemap="#desk-map">
+        <svg class="map-overlay" viewBox="0 0 1024 1024" aria-hidden="true">
+          <g data-outline="notobuk" class="outline selected"><rect x="450" y="112" width="251" height="206"/></g>
+          <g class="marker"><circle cx="570" cy="210" r="22"/><text x="570" y="217">1</text></g>
+          <g data-outline="lamp" class="outline"><polygon points="767 143 815 76 846 71 868 116 891 161 899 281 915 290 916 307 831 309 827 292 874 280 873 173 849 134 841 182 807 172"/></g>
+          <g class="marker"><circle cx="834" cy="127" r="22"/><text x="834" y="134">2</text></g>
+          <g data-outline="lill" class="outline"><circle cx="772" cy="244" r="64"/></g>
+          <g class="marker"><circle cx="772" cy="242" r="22"/><text x="772" y="249">3</text></g>
+          <g data-outline="laud" class="outline"><polygon points="154 304 376 278 377 314 704 329 919 337 1018 294 1018 308 925 356 154 326"/></g>
+          <g class="marker"><circle cx="495" cy="329" r="22"/><text x="495" y="336">4</text></g>
+          <g data-outline="tool" class="outline"><polygon points="0 140 84 157 133 373 270 367 281 390 145 425 138 506 196 500 198 416 389 407 391 427 281 444 270 506 411 545 411 588 276 621 220 642 230 757 405 794 435 855 402 872 380 828 246 793 260 902 237 935 210 922 214 890 187 802 43 849 24 901 0 890 0 835 55 799 55 761 168 741 166 637 38 630 0 605 0 540 32 406"/></g>
+          <g class="marker"><circle cx="70" cy="300" r="22"/><text x="70" y="307">5</text></g>
+          <g data-outline="tumba" class="outline"><rect x="628" y="358" width="358" height="526"/></g>
+          <g class="marker"><circle cx="760" cy="540" r="22"/><text x="760" y="547">6</text></g>
+        </svg>
+      </div>
+      <map name="desk-map" id="desk-map">
+        <area shape="rect" coords="450,112,701,318" href="#notobuk" alt="1. Sülearvuti" title="Sülearvuti" data-area="notobuk">
+        <area shape="poly" coords="767,143,815,76,846,71,868,116,891,161,899,281,915,290,916,307,831,309,827,292,874,280,873,173,849,134,841,182,807,172" href="#lamp" alt="2. Laualamp" title="Laualamp" data-area="lamp">
+        <area shape="circle" coords="772,244,64" href="#lill" alt="3. Lill potis" title="Lill potis" data-area="lill">
+        <area shape="poly" coords="154,304,376,278,377,314,704,329,919,337,1018,294,1018,308,925,356,154,326" href="#laud" alt="4. Kirjutuslaud" title="Kirjutuslaud" data-area="laud">
+        <area shape="poly" coords="0,140,84,157,133,373,270,367,281,390,145,425,138,506,196,500,198,416,389,407,391,427,281,444,270,506,411,545,411,588,276,621,220,642,230,757,405,794,435,855,402,872,380,828,246,793,260,902,237,935,210,922,214,890,187,802,43,849,24,901,0,890,0,835,55,799,55,761,168,741,166,637,38,630,0,605,0,540,32,406" href="#tool" alt="5. Kontoritool" title="Kontoritool" data-area="tool">
+        <area shape="rect" coords="628,358,986,884" href="#tumba" alt="6. Sahtliboks" title="Sahtliboks" data-area="tumba">
+      </map>
+      <nav class="legend" aria-label="Vali pildi ala">
+        <a href="#notobuk" data-area="notobuk">1. Sülearvuti</a>
+        <a href="#lamp" data-area="lamp">2. Laualamp</a>
+        <a href="#lill" data-area="lill">3. Lill potis</a>
+        <a href="#laud" data-area="laud">4. Kirjutuslaud</a>
+        <a href="#tool" data-area="tool">5. Kontoritool</a>
+        <a href="#tumba" data-area="tumba">6. Sahtliboks</a>
+      </nav>
+      <figcaption>Sama 1024 × 1024 px pilt on kõigil seitsmel lehel. Piirjooned näitavad klõpsatavaid alasid.</figcaption>
+    </figure>
+    <div class="details" aria-live="polite">
+      <p id="hint" hidden>Vali üks kuuest esemest, et lugeda selle kirjeldust.</p>
+      <section id="notobuk" class="description selected" tabindex="-1" aria-labelledby="title-notobuk">
+        <p class="eyebrow">Ala 1 · rect</p>
+        <h2 id="title-notobuk">Sülearvuti</h2>
+        <p>Sülearvuti asub laua keskel ning on selle töökoha peamine töövahend. Sellega saab kirjutada tekste, õppida programmeerimist ja otsida õppematerjale. Ekraan ja klaviatuur paiknevad ühes seadmes, mistõttu on seda lihtne kaasa võtta.</p>
+        <a href="notobuk.html">Ava selle ala eraldi leht →</a>
+      </section>
+      <section id="lamp" class="description" tabindex="-1" aria-labelledby="title-lamp">
+        <p class="eyebrow">Ala 2 · poly</p>
+        <h2 id="title-lamp">Laualamp</h2>
+        <p>Laualamp paikneb sülearvutist paremal ja suunab valguse tööpinnale. See aitab näha kirjutamisel või lugemisel väikeseid detaile. Lampi saab kasutada siis, kui aknast tulevast valgusest ei piisa.</p>
+        <a href="lamp.html">Ava selle ala eraldi leht →</a>
+      </section>
+      <section id="lill" class="description" tabindex="-1" aria-labelledby="title-lill">
+        <p class="eyebrow">Ala 3 · circle</p>
+        <h2 id="title-lill">Lill potis</h2>
+        <p>Roheline potitaim seisab sülearvuti ja lambi vahel. See lisab heledale töökohale värvi ning muudab ruumi hubasemaks. Taime jaoks tuleb valida sobiv valgus ja seda regulaarselt kasta.</p>
+        <a href="lill.html">Ava selle ala eraldi leht →</a>
+      </section>
+      <section id="laud" class="description" tabindex="-1" aria-labelledby="title-laud">
+        <p class="eyebrow">Ala 4 · poly</p>
+        <h2 id="title-laud">Kirjutuslaud</h2>
+        <p>Kirjutuslaud ühendab pildil olevad töövahendid üheks töökohaks. Selle pinnal on ruumi sülearvutile, lambile ja taimele. Vaba tööpind on oluline, et saaks mugavalt kirjutada ja vajalikud asjad üles leida.</p>
+        <a href="laud.html">Ava selle ala eraldi leht →</a>
+      </section>
+      <section id="tool" class="description" tabindex="-1" aria-labelledby="title-tool">
+        <p class="eyebrow">Ala 5 · poly</p>
+        <h2 id="title-tool">Kontoritool</h2>
+        <p>Kontoritool asub laua ees ning sellel on seljatugi, käetoed ja rattad. Seljatugi toetab istudes selga ning käetoed annavad kätele puhkekoha. Tooli kõrgus tuleks seada nii, et laua taga oleks mugav töötada.</p>
+        <a href="tool.html">Ava selle ala eraldi leht →</a>
+      </section>
+      <section id="tumba" class="description" tabindex="-1" aria-labelledby="title-tumba">
+        <p class="eyebrow">Ala 6 · rect</p>
+        <h2 id="title-tumba">Sahtliboks</h2>
+        <p>Sahtliboks asub laua paremal küljel ja sisaldab nelja sahtlit. Sahtlites saab hoida vihikuid, kirjutusvahendeid ja muid tarvikuid. Nii jääb lauapind korrastatuks ning vajalikud esemed on lähedal.</p>
+        <a href="tumba.html">Ava selle ala eraldi leht →</a>
+      </section>
+    </div>
+  </div>
+  <section class="pages" aria-labelledby="pages-title">
+    <h2 id="pages-title">Iga ala eraldi leht</h2>
+    <p>Igal koopial on sama pildikaart ning valitud eseme kirjeldus on kohe esile tõstetud.</p>
+    <ul><li><a href="notobuk.html" aria-current="page">Sülearvuti</a></li><li><a href="lamp.html">Laualamp</a></li><li><a href="lill.html">Lill potis</a></li><li><a href="laud.html">Kirjutuslaud</a></li><li><a href="tool.html">Kontoritool</a></li><li><a href="tumba.html">Sahtliboks</a></li></ul>
+  </section>
+</main>
+<footer><a href="../index.html">Tagasi kodulehele</a> · <a href="https://www.w3schools.com/html/html_images_imagemap.asp">HTML-pildikaardi juhend</a></footer>
 </body>
 </html>
