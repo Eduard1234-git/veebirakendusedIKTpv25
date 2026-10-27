@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f7f8f4;
+  color: #213d34;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  width: min(960px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 36px 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 36px;
+  color: #39705b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  max-width: 700px;
+  margin-bottom: 64px;
+}
+
+.eyebrow,
+.section-label,
+.card-label {
+  margin: 0;
+  color: #39705b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 12px 0 18px;
+  color: #183c32;
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 0;
+  color: #5b6964;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #e8eee9;
+  color: #285d4a;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.88em;
+}
+
+.section {
+  margin-bottom: 56px;
+  padding-top: 32px;
+  border-top: 1px solid #d9e0da;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.section-number {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: #dce9df;
+  color: #285d4a;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  margin: 3px 0 0;
+  color: #213d34;
+  font-size: 1.75rem;
+}
+
+.result-grid,
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.result-card {
+  padding: 26px;
+  border: 1px solid #dce2dc;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.accent-card {
+  border-color: #c7dbcd;
+  background: #f2f7f2;
+}
+
+.book-description {
+  margin: 16px 0;
+  color: #213d34;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.card-note {
+  margin: 0;
+  color: #6b7671;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.added-book {
+  margin: 0 0 18px;
+  color: #52615b;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid #dce2dc;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e8ece8;
+}
+
+th {
+  background: #f4f7f3;
+  color: #65736d;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+td {
+  color: #354b43;
+}
+
+td:first-child {
+  color: #213d34;
+  font-weight: 600;
+}
+
+td:last-child {
+  width: 100px;
+  font-variant-numeric: tabular-nums;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.summary-grid {
+  margin-top: 18px;
+}
+
+.summary-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 14px;
+  padding: 22px 24px;
+  border-radius: 14px;
+  background: #213d34;
+  color: #ffffff;
+}
+
+.summary-card strong {
+  grid-row: span 2;
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.summary-card span {
+  font-weight: 600;
+}
+
+.summary-card code {
+  width: fit-content;
+  margin-top: 5px;
+  background: #345349;
+  color: #dce9df;
+  font-size: 0.75rem;
+}
+
+.own-method {
+  margin-top: 18px;
+  padding: 26px;
+  border-left: 4px solid #60977d;
+  border-radius: 0 14px 14px 0;
+  background: #eaf1e9;
+}
+
+.own-method h3 {
+  margin: 10px 0;
+  color: #213d34;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 1.15rem;
+}
+
+.own-method p:not(.card-label) {
+  margin: 0;
+  color: #52615b;
+  line-height: 1.7;
+}
+
+.own-method ul {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding-left: 22px;
+  color: #213d34;
+  font-weight: 600;
+}
+
+.own-method li span {
+  color: #6b7671;
+  font-weight: 400;
+}
+
+footer {
+  padding-top: 24px;
+  border-top: 1px solid #d9e0da;
+  color: #6b7671;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .page {
+    width: min(100% - 28px, 960px);
+    padding-top: 24px;
+  }
+
+  .hero {
+    margin-bottom: 44px;
+  }
+
+  .result-grid,
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card,
+  .own-method {
+    padding: 22px;
+  }
+
+  th,
+  td {
+    padding: 13px 14px;
+  }
+}
