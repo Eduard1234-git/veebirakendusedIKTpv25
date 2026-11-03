@@ -1,11 +1,9 @@
 # Pildikaart
 
 Ava Pildikaart.html. Pildil on kuus klõpsatavat eset.
-Iga link avab eseme kirjeldusega HTML-lehe.
+Vajuta esemele: selle foto ja nimi ilmuvad samal lehel paremale.
 
-img kasutab usemap-iga kaarti. map sisaldab area-alasid.
-rect on ristkülik, circle on ring ja poly on hulknurk.
-Koordinaadid on tehtud 512 × 512 pildi jaoks.
-Pildi suuruse muutmisel tuleb muuta ka koordinaate.
-
-JavaScripti ja CSS-i selles ülesandes ei kasutata.
+Pildi juures kasutatakse `map` ja kuut `area`-ala.
+`rect` on ristkülik, `circle` on ring ja `poly` on hulknurk.
+Pildi suurus on 512 × 512, selle järgi on määratud ka koordinaadid.
+Lühike JavaScripti funktsioon muudab parempoolse foto ja nime.

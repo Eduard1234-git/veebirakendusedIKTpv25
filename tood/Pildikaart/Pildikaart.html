@@ -7,18 +7,30 @@
 </head>
 <body>
     <h1>Pildikaart: töölaud</h1>
-    <p>Vajuta pildil olevale esemele või kasuta all olevaid linke.</p>
+    <p>Vajuta pildil olevale esemele. Selle foto ilmub paremale.</p>
+    <div style="display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap;">
     <img src="tumba.png" alt="Töölaud arvuti, lambi, taime, tooli ja sahtlikapiga"
          width="512" height="512" usemap="#toolaud">
     <map name="toolaud">
-        <area shape="rect" coords="190,55,350,160" href="notobuk.html" alt="Sülearvuti">
-        <area shape="poly" coords="384,72,408,38,423,36,446,80,450,140,458,145,458,154,414,154,414,146,438,140,438,85,423,66,420,91" href="lamp.html" alt="Laualamp">
-        <area shape="circle" coords="386,122,32" href="lill.html" alt="Taim">
-        <area shape="poly" coords="77,152,188,139,188,157,352,165,460,168,509,147,509,154,462,178,77,163" href="laud.html" alt="Kirjutuslaud">
-        <area shape="rect" coords="0,80,60,300" href="tool.html" alt="Tool">
-        <area shape="rect" coords="314,179,493,442" href="tumba.html" alt="Sahtlikapp">
+        <area shape="rect" coords="190,55,350,160" href="notobuk.png" alt="Sülearvuti" onclick="naita('notobuk.png', 'Sülearvuti'); return false;">
+        <area shape="poly" coords="384,72,408,38,423,36,446,80,450,140,458,145,458,154,414,154,414,146,438,140,438,85,423,66,420,91" href="lamp.pmg.jpg" alt="Laualamp" onclick="naita('lamp.pmg.jpg', 'Laualamp'); return false;">
+        <area shape="circle" coords="386,122,32" href="lill.png" alt="Taim" onclick="naita('lill.png', 'Taim'); return false;">
+        <area shape="poly" coords="77,152,188,139,188,157,352,165,460,168,509,147,509,154,462,178,77,163" href="lauud.png" alt="Kirjutuslaud" onclick="naita('lauud.png', 'Kirjutuslaud'); return false;">
+        <area shape="rect" coords="0,80,60,300" href="tool.png" alt="Tool" onclick="naita('tool.png', 'Tool'); return false;">
+        <area shape="rect" coords="314,179,493,442" href="tumba.png" alt="Sahtlikapp" onclick="naita('tumba.png', 'Sahtlikapp'); return false;">
     </map>
-    <p><a href="notobuk.html">Sülearvuti</a> | <a href="lamp.html">Laualamp</a> | <a href="lill.html">Taim</a> | <a href="laud.html">Kirjutuslaud</a> | <a href="tool.html">Tool</a> | <a href="tumba.html">Sahtlikapp</a></p>
+    <div>
+        <h2 id="nimi">Vali pildilt ese</h2>
+        <img id="ese" alt="Valitud ese" width="300" hidden>
+    </div>
+    </div>
+    <script>
+        function naita(pilt, nimi) {
+            document.getElementById("nimi").textContent = nimi;
+            document.getElementById("ese").src = pilt;
+            document.getElementById("ese").hidden = false;
+        }
+    </script>
     <p><a href="Pildikaart.html">Pildikaart</a> | <a href="../../index.html">Avaleht</a></p>
 </body>
 </html>
