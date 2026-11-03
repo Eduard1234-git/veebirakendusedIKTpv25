@@ -1,111 +1,61 @@
-// 1. Raamatu objekt ja selle meetodid
-const raamat = {
-  pealkiri: "Kevade",
-  autor: "Oskar Luts",
-  aasta: 1912,
+// Sama tekst läheb konsooli ja HTML-lehele.
+function kuva(tekst) {
+    console.log(tekst);
+    document.getElementById("vastus").innerHTML += "<p>" + tekst + "</p>";
+}
 
-  kuvaKirjeldus() {
-    return `${this.pealkiri} — ${this.autor} (${this.aasta})`;
-  },
-
-  muudaAasta(uusAasta) {
-    this.aasta = uusAasta;
-  },
-};
-
-console.log("--- RAAMAT ---");
-const algneKirjeldus = raamat.kuvaKirjeldus();
-console.log("Algne raamat:", algneKirjeldus);
-
-raamat.muudaAasta(2020);
-const muudetudKirjeldus = raamat.kuvaKirjeldus();
-console.log("Raamat pärast aasta muutmist:", muudetudKirjeldus);
-
-// 2. Raamatukogu objekt, mille omaduseks on raamatute massiiv
-const raamatukogu = {
-  raamatud: [
-    { pealkiri: "Kevade", autor: "Oskar Luts", aasta: 1912 },
-    { pealkiri: "Tõde ja õigus I", autor: "A. H. Tammsaare", aasta: 1926 },
-    {
-      pealkiri: "Mees, kes teadis ussisõnu",
-      autor: "Andrus Kivirähk",
-      aasta: 2007,
+let raamat = {
+    pealkiri: "Kevade",
+    autor: "Oskar Luts",
+    aasta: 1912,
+    kuvaKirjeldus() {
+        return this.pealkiri + " - " + this.autor + " (" + this.aasta + ")";
     },
-    { pealkiri: "Hea härra Kivi", autor: "Andrus Kivirähk", aasta: 2018 },
-  ],
-
-  kuvaRaamatud() {
-    this.raamatud.forEach((raamat, indeks) => {
-      console.log(
-        `${indeks + 1}. ${raamat.pealkiri} — ${raamat.autor} (${raamat.aasta})`,
-      );
-    });
-  },
-
-  lisaRaamat(uusRaamat) {
-    this.raamatud.push(uusRaamat);
-  },
-
-  raamatuteKoguarv() {
-    return this.raamatud.length;
-  },
-
-  mituParast2000() {
-    return this.raamatud.filter((raamat) => raamat.aasta > 2000).length;
-  },
-
-  // Minu meetod leiab ja tagastab kõik valitud autori raamatud.
-  leiaAutoriRaamatud(autor) {
-    return this.raamatud.filter((raamat) => raamat.autor === autor);
-  },
+    muudaAasta(uusAasta) {
+        this.aasta = uusAasta;
+    }
 };
 
-console.log("--- RAAMATUKOGU ---");
-console.log("Raamatud enne uue raamatu lisamist:");
-raamatukogu.kuvaRaamatud();
+kuva("Algne raamat: " + raamat.kuvaKirjeldus());
+raamat.muudaAasta(2020);
+kuva("Muudetud aasta: " + raamat.kuvaKirjeldus());
 
-const lisatudRaamat = {
-  pealkiri: "Rehepapp",
-  autor: "Andrus Kivirähk",
-  aasta: 2000,
+let raamatukogu = {
+    raamatud: [
+        { pealkiri: "Kevade", autor: "Oskar Luts", aasta: 1912 },
+        { pealkiri: "Tõde ja õigus I", autor: "A. H. Tammsaare", aasta: 1926 },
+        { pealkiri: "Mees, kes teadis ussisõnu", autor: "Andrus Kivirähk", aasta: 2007 },
+        { pealkiri: "Hea härra Kivi", autor: "Andrus Kivirähk", aasta: 2018 }
+    ],
+    kuvaRaamatud() {
+        this.raamatud.forEach(raamat => {
+            kuva(raamat.pealkiri + " - " + raamat.autor + " (" + raamat.aasta + ")");
+        });
+    },
+    lisaRaamat(uusRaamat) {
+        this.raamatud.push(uusRaamat);
+    },
+    raamatuteKoguarv() {
+        return this.raamatud.length;
+    },
+    mituParast2000() {
+        return this.raamatud.filter(raamat => raamat.aasta > 2000).length;
+    },
+    // Minu meetod otsib autori nime järgi.
+    leiaAutoriRaamatud(autor) {
+        return this.raamatud.filter(raamat => raamat.autor === autor);
+    }
 };
-raamatukogu.lisaRaamat(lisatudRaamat);
-console.log("Lisatud raamat:", lisatudRaamat);
 
-console.log("Kõik raamatud pärast lisamist:");
+kuva("Raamatud enne lisamist:");
 raamatukogu.kuvaRaamatud();
-
-const koguarv = raamatukogu.raamatuteKoguarv();
-console.log("Raamatute koguarv:", koguarv);
-
-const parast2000 = raamatukogu.mituParast2000();
-console.log("Raamatuid, mis ilmusid pärast 2000. aastat:", parast2000);
-
-const autoriRaamatud = raamatukogu.leiaAutoriRaamatud("Andrus Kivirähk");
-console.log("Andrus Kivirähku raamatud:", autoriRaamatud);
-
-// Tulemuste kuvamine HTML-lehel
-let raamatuteTulemus = "";
-raamatukogu.raamatud.forEach((raamat) => {
-  raamatuteTulemus += `
-    <tr>
-      <td>${raamat.pealkiri}</td>
-      <td>${raamat.autor}</td>
-      <td>${raamat.aasta}</td>
-    </tr>
-  `;
+raamatukogu.lisaRaamat({ pealkiri: "Rehepapp", autor: "Andrus Kivirähk", aasta: 2000 });
+kuva("Lisatud raamat: Rehepapp (2000)");
+kuva("Raamatud pärast lisamist:");
+raamatukogu.kuvaRaamatud();
+kuva("Raamatute koguarv: " + raamatukogu.raamatuteKoguarv());
+kuva("Pärast 2000. aastat: " + raamatukogu.mituParast2000());
+kuva("Andrus Kivirähku raamatud:");
+raamatukogu.leiaAutoriRaamatud("Andrus Kivirähk").forEach(raamat => {
+    kuva(raamat.pealkiri + " (" + raamat.aasta + ")");
 });
-
-let autoriTulemus = "";
-autoriRaamatud.forEach((raamat) => {
-  autoriTulemus += `<li>${raamat.pealkiri} <span>(${raamat.aasta})</span></li>`;
-});
-
-document.getElementById("algneKirjeldus").textContent = algneKirjeldus;
-document.getElementById("muudetudKirjeldus").textContent = muudetudKirjeldus;
-document.getElementById("lisatudRaamat").innerHTML =
-  `Uue raamatu lisamine: <strong>${lisatudRaamat.pealkiri}</strong> (${lisatudRaamat.aasta})`;
-document.getElementById("raamatud").innerHTML = raamatuteTulemus;
-document.getElementById("koguarv").textContent = koguarv;
-document.getElementById("parast2000").textContent = parast2000;
-document.getElementById("autoriRaamatud").innerHTML = autoriTulemus;
