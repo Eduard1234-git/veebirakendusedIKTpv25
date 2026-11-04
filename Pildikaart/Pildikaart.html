@@ -21,9 +21,11 @@
             min-width: 0;
         }
 
-        #valitud {
+        #foto {
             width: 100%;
             max-width: 500px;
+            height: 512px;
+            border: 0;
         }
     </style>
 </head>
@@ -38,48 +40,32 @@
 
             <map name="toolaud">
                 <area shape="rect" coords="190,55,350,160"
-                      href="notobuk.png" alt="Sülearvuti"
-                      onclick="naita('notobuk.png', 'Sülearvuti'); return false;">
+                      href="notobuk.html" target="foto" alt="Sülearvuti">
 
                 <area shape="poly"
                       coords="384,72,408,38,423,36,446,80,450,140,458,145,458,154,414,154,414,146,438,140,438,85,423,66,420,91"
-                      href="lamp.pmg.jpg" alt="Lamp"
-                      onclick="naita('lamp.pmg.jpg', 'Lamp'); return false;">
+                      href="lamp.html" target="foto" alt="Lamp">
 
                 <area shape="circle" coords="386,122,32"
-                      href="lill.png" alt="Taim"
-                      onclick="naita('lill.png', 'Taim'); return false;">
+                      href="lill.html" target="foto" alt="Taim">
 
                 <area shape="poly"
                       coords="77,152,188,139,188,157,352,165,460,168,509,147,509,154,462,178,77,163"
-                      href="lauud.png" alt="Laud"
-                      onclick="naita('lauud.png', 'Laud'); return false;">
+                      href="laud.html" target="foto" alt="Laud">
 
                 <area shape="rect" coords="0,80,60,300"
-                      href="tool.png" alt="Tool"
-                      onclick="naita('tool.png', 'Tool'); return false;">
+                      href="tool.html" target="foto" alt="Tool">
 
                 <area shape="rect" coords="314,179,493,442"
-      href="lauud.png" alt="Laud"
-      onclick="naita('lauud.png', 'Laud'); return false;">
+      href="laud.html" target="foto" alt="Laud">
             </map>
         </div>
 
         <div class="parem">
-            <h2 id="nimi">Vali ese</h2>
-            <img id="valitud" alt="Valitud ese" hidden>
+            <h2>Valitud ese</h2>
+            <iframe id="foto" name="foto"
+                    title="Valitud eseme foto"></iframe>
         </div>
     </div>
-
-    <script>
-        function naita(fail, nimi) {
-            document.getElementById("nimi").textContent = nimi;
-
-            let pilt = document.getElementById("valitud");
-            pilt.src = fail;
-            pilt.alt = nimi;
-            pilt.hidden = false;
-        }
-    </script>
 </body>
 </html>
