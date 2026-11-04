@@ -21,11 +21,23 @@
             min-width: 0;
         }
 
-        #foto {
+        .ese {
+            display: none;
+        }
+
+        .ese:target {
+            display: block;
+        }
+
+        .ese p {
+            font-size: 16px;
+        }
+
+        .ese img {
             width: 100%;
             max-width: 500px;
-            height: 512px;
-            border: 0;
+            max-height: 440px;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -40,31 +52,53 @@
 
             <map name="toolaud">
                 <area shape="rect" coords="190,55,350,160"
-                      href="notobuk.html" target="foto" alt="Sülearvuti">
+                      href="#notobuk" alt="Sülearvuti">
 
                 <area shape="poly"
                       coords="384,72,408,38,423,36,446,80,450,140,458,145,458,154,414,154,414,146,438,140,438,85,423,66,420,91"
-                      href="lamp.html" target="foto" alt="Lamp">
+                      href="#lamp" alt="Lamp">
 
                 <area shape="circle" coords="386,122,32"
-                      href="lill.html" target="foto" alt="Taim">
+                      href="#lill" alt="Taim">
 
                 <area shape="poly"
                       coords="77,152,188,139,188,157,352,165,460,168,509,147,509,154,462,178,77,163"
-                      href="laud.html" target="foto" alt="Laud">
+                      href="#laud" alt="Laud">
 
                 <area shape="rect" coords="0,80,60,300"
-                      href="tool.html" target="foto" alt="Tool">
+                      href="#tool" alt="Tool">
 
                 <area shape="rect" coords="314,179,493,442"
-      href="laud.html" target="foto" alt="Laud">
+      href="#laud" alt="Laud">
             </map>
         </div>
 
         <div class="parem">
             <h2>Valitud ese</h2>
-            <iframe id="foto" name="foto"
-                    title="Valitud eseme foto"></iframe>
+            <div class="ese" id="notobuk">
+                <p>Sülearvutiga saab õppida ja internetti kasutada. Sellega saab ka dokumente kirjutada.</p>
+                <img src="notobuk.png" alt="Sülearvuti">
+            </div>
+
+            <div class="ese" id="lamp">
+                <p>Laualamp valgustab töökohta. Seda saab kasutada lugemisel ja õppimisel.</p>
+                <img src="lamp.pmg.jpg" alt="Lamp">
+            </div>
+
+            <div class="ese" id="lill">
+                <p>See on toataim. Taim kaunistab tuba ja vajab kastmist.</p>
+                <img src="lill.png" alt="Taim">
+            </div>
+
+            <div class="ese" id="laud">
+                <p>See on kirjutuslaud. Laua taga saab õppida ja sahtlites asju hoida.</p>
+                <img src="lauud.png" alt="Laud">
+            </div>
+
+            <div class="ese" id="tool">
+                <p>See on kontoritool. Sellel saab laua taga istuda.</p>
+                <img src="tool.png" alt="Tool">
+            </div>
         </div>
     </div>
 </body>
