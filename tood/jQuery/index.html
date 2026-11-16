@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery kasutamine</title>
+    <link rel="stylesheet" href="queryStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#kuva').hide();
+            // nupu peida vajutamine
+            $('#peida').click(function () {
+                $('#sisu').hide(500);
+                $(this).hide();
+                $('#kuva').show();
+            });
+            // nupu kuva vajutamine
+            $('#kuva').click(function () {
+                $('#sisu').show(500);
+                $(this).hide();
+                $('#peida').show();
+            });
+
+            start();
+        });
+        function start(){
+            $('#sisu').draggable();
+            $('#Pilt').draggable();
+            $('#Pilt').bind("drag", xyKoordinat);
+            $('#sisu').bind("drag", xyKoordinat);
+
+        }
+
+        function xyKoordinat(event, ui) {
+            let koht = ui.offset;
+            $('#vastus').html("X: " + koht.left + " Y: " + koht.top);
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h1>jQuery kasutamine</h1>
+</header>
+<main>
+
+    <input type="button" value="<---" id="vasakule" style="display:none"
+           onclick="$('#sisu, h2').animate({left: '-=500px'}, 500); $(this).hide(); $('#paremale').show();">
+
+    <input type="button" value="--->" id="paremale"
+           onclick="$('#sisu, h2').animate({left: '+=500px'}, 500); $(this).hide(); $('#vasakule').show();">
+
+    <input type="button" value="Peida" id="peida">
+    <input type="button" value="Kuva" id="kuva">
+
+    <section>
+        <h2>jQuery file upload</h2>
+        <div id="sisu">
+            test!
+        </div>
+    </section>
+    <section>
+        <img src="https://storage-api.petstory.ru/resize/1000x1000x80/69/69/08/696908044dc0427683e2bae9c4c032ec.jpeg" alt="Põnev pilt" id="Pilt">
+        <div id="vastus"></div>
+    </section>
+
+
+</main>
+</body>
+</html>
