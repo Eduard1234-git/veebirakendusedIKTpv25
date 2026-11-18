@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #edf2f7;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+h1, h2 {
+    color: #28567a;
+}
+
+input[type="text"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #28567a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#kokkuvote {
+    background-color: white;
+    padding: 15px;
+    min-height: 30px;
+    white-space: pre-wrap;
+}

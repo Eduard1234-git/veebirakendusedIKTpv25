@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmeerimise küsimustik</title>
+    <link rel="stylesheet" href="lihtne.css">
+    <script src="lihtne.js" defer></script>
+</head>
+<body>
+<h1>Programmeerimise küsimustik</h1>
+
+<form>
+    <p>
+        Milliseid programmeerimiskeeli sa tead?<br>
+        <input type="checkbox" name="keeled" value="JavaScript"> JavaScript<br>
+        <input type="checkbox" name="keeled" value="Python"> Python<br>
+        <input type="checkbox" name="keeled" value="Java"> Java<br>
+        <input type="checkbox" name="keeled" value="C#"> C#<br>
+        <input type="checkbox" name="keeled" value="PHP"> PHP
+    </p>
+
+    <p>
+        Mida arvad programmeerimise õppimisest?<br>
+        <textarea id="arvamus" rows="4"></textarea>
+    </p>
+
+    <p>
+        Mitu tundi nädalas tegeled programmeerimisega?<br>
+        <input type="number" id="tunnid" min="0" max="168">
+    </p>
+
+    <p>
+        Kas sulle meeldib programmeerida?<br>
+        <input type="radio" name="meeldib" value="Jah" onclick="naitaSmaili()"> Jah
+        <input type="radio" name="meeldib" value="Ei" onclick="naitaSmaili()"> Ei
+        <img id="smile" src="roomus.svg" alt="Smaili" width="48" height="48" hidden>
+    </p>
+
+    <p>
+        Milliseid tööriistu oskad nimetada?<br>
+        <input type="text" id="tooriistad" placeholder="Visual Studio Code, GitHub...">
+    </p>
+
+    <p>
+        Millist keelt sooviksid õppida?<br>
+        <select id="oppida">
+            <option value="">Vali keel...</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>Java</option>
+            <option>C#</option>
+            <option>PHP</option>
+            <option>C++</option>
+            <option>Ruby</option>
+        </select>
+    </p>
+
+    <button type="button" onclick="saada()">Saada</button>
+    <button type="reset" onclick="puhasta()">Puhasta</button>
+</form>
+
+<h2>Kokkuvõte</h2>
+<div id="kokkuvote"></div>
+</body>
+</html>
