@@ -4,6 +4,20 @@
   <meta charset="UTF-8">
   <title>Tehtud tööd - Eduardi veebirakenduste alused</title>
   <link rel="stylesheet" href="../style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#menyy a').hover(
+              function() {
+                $(this).addClass('hover');
+              },
+              function() {
+                $(this).removeClass('hover');
+              }
+      );
+    });
+  </script>
 </head>
 <body>
 
@@ -14,24 +28,35 @@
     <h1>Eduardi veebirakenduste alused</h1>
   </header>
 </div>
-
+<h2><em>Breadcrumb</em> menüü</h2>
+<ul id="menyy">
+  <li><a href="#">Avaleht</a>
+    <ul>
+      <li><a href="../tood/joonis/canvasJoonistamine.html">Alamenüü 1</a></li>
+      <li><a href="../tood/JSObjektid/index.html">Alamenüü 2</a></li>
+      <li><a href="../ProgrammeerimiseKysitlus/index.html">Alamenüü 3</a></li>
+    </ul>
+  </li>
+</ul>
 
 <div class="page-layout">
 
   <!-- Основной контент страницы -->
   <main>
     <section id="kast1">
-  <h3>Tehtud tööd</h3>
-  <p>
-    <a href="../kujundus2/index.html">Vaata minu uut tööd (Meedia leht)</a> ||
-    <a href="../Vormid/kysimustik.html">Muusika küsimustik</a> ||
-    <a href="tabelid.html">Tabelid</a> ||
-    <a href="../Pildikaart/Pildikaart.html">Pildikaart (Töölaud)</a> ||
-    <a href="../ProgrammeerimiseKysitlus/index.html">Programmeerimise küsimustik</a> ||
-    <a href="../JSObjektid/index.html">JS: Objektid ja meetodid</a> ||
-    <a href="joonis/canvasJoonistamine.html">canvasJoonistamine (Töölaud)</a>
-  </p>
-</section>
+      <h3>Tehtud tööd</h3>
+      <p>
+        <a href="../kujundus2/index.html">Vaata minu uut tööd (Meedia leht)</a> ||
+        <a href="../Vormid/kysimustik.html">Muusika küsimustik</a> ||
+        <a href="../tood/tabelid.html">Tabelid</a>||
+        <a href="../Pildikaart/Pildikaart.html">Pildikaart (Töölaud)</a> ||
+        <a href="../ProgrammeerimiseKysitlus/index.html">Programmeerimise küsimustik</a> ||
+        <a href="../tood/JSObjektid/index.html">JS: Objektid ja meetodid</a>  ||
+        <a href="../tood/joonis/canvasJoonistamine.html">canvasJoonistamine</a>
+      </p>
+    </section>
+
+
   </main>
 
   <!-- Вертикальное навигационное меню справа -->
