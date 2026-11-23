@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Eduardi veebirakenduste alused</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="queryStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#kuva').hide();
+
+            $('#peida').click(function() {
+                $('#sisu').hide(500);
+                $(this).hide();
+                $('#kuva').show();
+            });
+            $('#kuva').click(function() {
+                $('#sisu').show(500);
+                $(this).hide();
+                $('#peida').show();
+            });
+
+            start();
+        });
+
+        function start() {
+            $('#sisu').draggable();   // lohistada hiirega veebilehel
+            $('#pilt').draggable();
+        }
+    </script>
+</head>
+<body>
+
+<!-- Päis -->
+<header>
+    <h1>Eduardi veebirakenduste alused</h1>
+</header>
+
+<!-- Navigeerimismenüü -->
+<nav>
+    <ul>
+        <li><a href="index.html">Kodu</a></li>
+        <li><a href="tutvustus.html">Tutvustus</a></li>
+        <li><a href="lingid.html">Kasulikud lingid</a></li>
+        <li><a href="tood/tood.html">Tehtud tööd</a></li>
+        <li><a href="meedia.html">Meedia leht</a></li>
+    </ul>
+</nav>
+
+<!-- Põhiosa -->
+<main>
+    <input type="button" value="--->" id="paremale"
+           onclick="$('#sisu, h2').animate({left: '500px'}, 1000);
+                    $(this).hide();
+                    $('#vasakule').show();">
+
+    <input type="button" value="<---" id="vasakule" style="display:none"
+           onclick="$('#sisu, h2').animate({left: '0px'}, 1000);
+                    $(this).hide();
+                    $('#paremale').show();">
+
+    <input type="button" value="Peida" id="peida">
+    <input type="button" value="Kuva" id="kuva">
+
+    <section>
+        <h2>Tere tulemast!</h2>
+        <div id="sisu">
+            Mina olen Eduard. Siin on minu veebirakenduste tundides tehtud tööd.
+            <br>
+            <a href="Pildikaart/Pildikaart.html">Pildikaart</a>
+            <br>
+            <a href="tood/JSObjektid/index.html">JS: Objektid ja meetodid</a>
+
+
+
+        </div>
+    </section>
+
+    <section>
+        <img id="pilt" src="Nimetu.png" alt="See on ise tehtud pilt">
+    </section>
+</main>
+
+<!-- Jalus -->
+<footer>
+    <p>Eduardi veebirakenduste aluste tööd</p>
+</footer>
+
+</body>
+</html>

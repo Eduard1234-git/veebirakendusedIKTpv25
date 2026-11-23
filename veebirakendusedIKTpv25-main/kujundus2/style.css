@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap');
+
+:root {
+    --cyber-black: #030008;
+    --neon-cyan: #00f3ff;
+    --neon-pink: #ff0055;
+    --neon-yellow: #f4ee01;
+    --glass-bg: rgba(15, 12, 30, 0.75);
+    --border-glow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at 20% 30%, #120328 0%, var(--cyber-black) 100%);
+    color: var(--neon-cyan);
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Обложка с логотипом на каждой странице */
+.hero-cover {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, rgba(255,0,85,0.3), rgba(0,243,255,0.3)), url('4_Image.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid var(--neon-pink);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 10px 40px rgba(255, 0, 85, 0.3);
+    gap: 30px;
+}
+
+/* Логотип в шапке */
+.header-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--neon-yellow);
+    box-shadow: 0 0 20px var(--neon-yellow);
+}
+
+header {
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 3px 3px var(--neon-pink), -3px -3px var(--neon-cyan);
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+/* Контейнер для макета: контент слева, вертикальное меню справа */
+.page-layout {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Основной контент сайта */
+main {
+    flex: 1;
+}
+
+/* Вертикальное навигационное меню справа */
+nav {
+    width: 260px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 2px solid var(--neon-cyan);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: var(--border-glow);
+    position: sticky;
+    top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--neon-yellow);
+    text-decoration: none;
+    padding: 12px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    background: linear-gradient(45deg, transparent 50%, var(--neon-pink) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid var(--neon-yellow);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(244, 238, 1, 0.2);
+}
+
+nav ul li a:hover {
+    background-position: left bottom;
+    color: var(--cyber-black);
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 20px var(--neon-pink);
+    transform: translateX(-5px);
+}
+
+#suurkast {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Асимметричные рамки для секций */
+section, #kast1, #kast2 {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border: 3px solid;
+    border-image: linear-gradient(to right, var(--neon-cyan), var(--neon-pink)) 1;
+    padding: 25px;
+    border-radius: 25px 5px 25px 5px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+#kast1 {
+    border-color: var(--neon-cyan);
+    border-radius: 5px 30px 5.px 30px;
+}
+
+#kast2 {
+    border-color: var(--neon-pink);
+    border-radius: 30px 5px 30px 5px;
+}
+
+h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-yellow);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(244, 238, 1, 0.4);
+    margin-top: 0;
+}
+
+p {
+    color: #c0c0d0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.main-custom-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px dashed var(--neon-yellow);
+    box-shadow: 0 0 30px rgba(244, 238, 1, 0.5);
+    display: block;
+    margin: 15px auto;
+}
+
+.galerii-Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.galerii-Grid img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border: 2px solid var(--neon-cyan);
+    border-radius: 8px;
+}
+
+iframe {
+    border-radius: 10px;
+    border: 2px solid var(--neon-pink);
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    background: #01010a;
+    color: var(--neon-pink);
+    text-align: center;
+    padding: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    border-top: 3px solid var(--neon-yellow);
+    box-shadow: 0 -5px 20px rgba(255, 0, 85, 0.2);
+    margin-top: 60px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,7 @@
+canvas#canvas {
+    background-color: greenyellow;
+    border: 1px solid green;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+}
