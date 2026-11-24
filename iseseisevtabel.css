@@ -1,0 +1,101 @@
+#iseseisev {
+    width: 620px;
+    height: 360px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    left: 30%; /* et oleks nagu lehe keskel */
+    top: 100px;
+    position: absolute;
+}
+
+#iseseisev td {
+    border: 1px solid black;
+}
+
+#iseseisev tr:nth-child(1) {
+    height: 65px;
+}
+
+#iseseisev tr:nth-child(2) {
+    height: 60px;
+}
+
+#iseseisev tr:nth-child(3) {
+    height: 50px;
+}
+
+#iseseisev tr:nth-child(4) {
+    height: 70px;
+}
+
+#iseseisev tr:nth-child(5) {
+    height: 115px;
+}
+
+#iseseisev tr:nth-child(1) td:nth-child(1) {
+    background-color: lawngreen;
+    width: 520px;
+}
+
+#iseseisev tr:nth-child(1) td:nth-child(2) {
+    background-color: #deadface;
+    width: 100px;
+}
+
+#iseseisev tr:nth-child(2) td:nth-child(1) {
+    background-color: lavenderblush;
+    width: 110px;
+}
+
+#iseseisev tr:nth-child(2) td:nth-child(2) {
+    background-color: lemonchiffon;
+    width: 250px;
+}
+
+#iseseisev tr:nth-child(2) td:nth-child(3) {
+    background-color: lightblue;
+    width: 260px;
+}
+
+#iseseisev tr:nth-child(3) td:nth-child(1) {
+    background-color: lightcoral;
+    width: 250px;
+}
+
+#iseseisev tr:nth-child(3) td:nth-child(2) {
+    background-color: lightcyan;
+    width: 160px;
+}
+
+#iseseisev tr:nth-child(3) td:nth-child(3) {
+    background-color: lightsalmon;
+    width: 100px;
+}
+
+#iseseisev tr:nth-child(4) td:nth-child(1) {
+    background-color: lightseagreen;
+}
+
+#iseseisev tr:nth-child(4) td:nth-child(2) {
+    background-color: lightskyblue;
+}
+
+#iseseisev tr:nth-child(4) td:nth-child(3) {
+    background-color: lightslategray;
+}
+
+#iseseisev tr:nth-child(5) td:nth-child(1) {
+    background-color: lightyellow;
+    width: 410px;
+}
+
+#iseseisev tr:nth-child(5) td:nth-child(2) {
+    background-color: mediumvioletred;
+    width: 50px;
+}
+
+#iseseisev tr:nth-child(5) td:nth-child(3) {
+    background-color: orangered;
+    width: 50px;
+}
