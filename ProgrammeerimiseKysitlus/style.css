@@ -1,16 +1,55 @@
+/* ===== Вся страница ===== */
 body {
     font-family: Arial, sans-serif;
     background-color: #edf2f7;
     color: #243447;
     margin: 20px;
 }
-main { max-width: 900px; margin: auto; }
-h1, h2 { color: #28567a; }
-table { width: 100%; border-collapse: collapse; background-color: white; }
-th, td { border: 1px solid #b5c7d5; padding: 15px; text-align: left; vertical-align: top; }
-th { background-color: #28567a; color: white; }
-td:first-child { width: 42%; }
-input[type="text"], input[type="number"], textarea, select {
+
+/* Содержимое по центру, не шире 900px */
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Заголовки */
+h1, h2 {
+    color: #28567a;
+}
+
+
+/* ===== Таблица ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #b5c7d5;
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Шапка таблицы */
+th {
+    background-color: #28567a;
+    color: white;
+}
+
+/* Первая колонка (вопросы) */
+td:first-child {
+    width: 42%;
+}
+
+
+/* ===== Поля ввода ===== */
+/* Только текст, число, textarea и список (галочки и кружки не трогаем) */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
     width: 100%;
     box-sizing: border-box;
     padding: 8px;
@@ -18,15 +57,73 @@ input[type="text"], input[type="number"], textarea, select {
     border-radius: 4px;
     font: inherit;
 }
-textarea { resize: vertical; }
-input[type="checkbox"], input[type="radio"] { margin-bottom: 8px; }
-button { background-color: #28567a; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font: inherit; }
-button:hover { background-color: #16374f; }
-.vastus { color: #205d35; margin-bottom: 0; overflow-wrap: anywhere; }
-#smile { vertical-align: middle; margin-left: 10px; }
-#kokkuvote { background-color: white; border: 1px solid #b5c7d5; padding: 15px; min-height: 35px; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.6; }
+
+/* Textarea можно растягивать только по высоте */
+textarea {
+    resize: vertical;
+}
+
+/* Отступ под галочками и кружками */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-bottom: 8px;
+}
+
+
+/* ===== Кнопки ===== */
+button {
+    background-color: #28567a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+}
+
+/* Кнопка темнеет при наведении мыши */
+button:hover {
+    background-color: #16374f;
+}
+
+
+/* ===== Ответы под полями (зелёный текст) ===== */
+.vastus {
+    color: #205d35;
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Смайлик */
+#smile {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+
+/* ===== Блок «Kokkuvõte» (итог) ===== */
+#kokkuvote {
+    background-color: white;
+    border: 1px solid #b5c7d5;
+    padding: 15px;
+    min-height: 35px;
+    white-space: pre-wrap;   /* чтобы работали переносы строк \n из JS */
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+}
+
+
+/* ===== Телефоны (экран до 600px) ===== */
 @media (max-width: 600px) {
-    body { margin: 10px; }
-    th, td { padding: 8px; }
-    h1 { font-size: 26px; }
+    body {
+        margin: 10px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
 }
