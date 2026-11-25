@@ -36,7 +36,14 @@ function naitaMeeldib() {
         document.getElementById("meeldibVastus").textContent = "Programmeerimine meeldib!";
         pilt.src = "roomus.svg";
         pilt.alt = "Rõõmus nägu";
-    } else {
+    }
+    else if (document.getElementById("ei tea").checked) {
+        document.getElementById("meeldibVastus").textContent = "Miks sa ei tea?";
+        pilt.src = "kurb.svg";
+        pilt.alt = "Kurb nägu";
+    }
+
+    else {
         document.getElementById("meeldibVastus").textContent = "Programmeerimine ei meeldi.";
         pilt.src = "kurb.svg";
         pilt.alt = "Kurb nägu";
@@ -50,6 +57,17 @@ function naitaTooriistad() {
 
 function naitaValik() {
     document.getElementById("valikuVastus").textContent = "Sinu valik: " + document.getElementById("oppida").value;
+}
+
+function  naitaLeping(){
+    var leping= document.getElementsByName("leping").checked;
+    if(leping) {
+        document.getElementById("lepingVastus").textContent = "Sinu leping";
+    }
+    else {document.getElementById("lepingVastus").textContent = "Sinu leping ei ole";
+
+    }
+
 }
 
 // Kokkuvõtte jaoks loeme kõik väljad uuesti.

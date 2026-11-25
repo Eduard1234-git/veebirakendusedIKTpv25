@@ -37,6 +37,7 @@
 <td>Kas sulle meeldib programmeerida?</td>
 <td><label><input type="radio" name="meeldib" id="jah" value="Jah" onclick="naitaMeeldib()"> Jah</label>
 <label><input type="radio" name="meeldib" id="ei" value="Ei" onclick="naitaMeeldib()"> Ei</label>
+    <label><input type="radio" name="meeldib" id="ei tea" value="ei tea" onclick="naitaMeeldib()">Ma ei tea</label>
 <img id="smile" src="roomus.svg" alt="Rõõmus nägu" width="48" height="48" hidden>
 <p class="vastus" id="meeldibVastus" aria-live="polite"></p></td>
 </tr>
@@ -58,6 +59,14 @@
 <option value="Ruby">Ruby</option>
 </select>
 <p class="vastus" id="valikuVastus" aria-live="polite"></p></td>
+</tr>
+<tr>
+   <td><label for="leping">Kas sa nõustud lepinguga? </label><td>
+    <td> <input type="checkbox" id="leping" name="lepping" value="Jah" onchange="naitaLeping()">Jah</td>
+    <p class= "vastus" id="lepingVastus" ></p>
+
+
+   </td>
 </tr>
 </tbody>
 </table>
