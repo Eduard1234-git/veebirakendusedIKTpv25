@@ -60,8 +60,8 @@ function naitaValik() {
 }
 
 function  naitaLeping(){
-    var leping= document.getElementsByName("leping").checked;
-    if(leping) {
+
+    if (document.getElementById("leping").checked) {
         document.getElementById("lepingVastus").textContent = "Sinu leping";
     }
     else {document.getElementById("lepingVastus").textContent = "Sinu leping ei ole";
